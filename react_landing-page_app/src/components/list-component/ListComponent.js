@@ -11,7 +11,8 @@ const ListComponent = (props) => {
     <ListComponentContainer>
       <ListHead>{props.title}</ListHead>
       <ListContents>
-        <ListItem></ListItem>
+        {props.items &&
+          props.items.map((item, key) => <ListItem key={key}>{item}</ListItem>)}
       </ListContents>
     </ListComponentContainer>
   );

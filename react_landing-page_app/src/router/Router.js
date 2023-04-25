@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import { MainLayout } from "../layouts";
-import { ErrorPage, HomePage } from "../pages";
+import { ErrorPage, HomePage, LandingPage, WeatherPage } from "../pages";
 
 export const Router = createBrowserRouter([
   {
@@ -11,9 +11,14 @@ export const Router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
+        path: "",
+        element: <LandingPage />,
+      },
+      {
         path: "home",
         element: <HomePage />,
       },
+      { path: "weather", element: <WeatherPage /> },
     ],
   },
 ]);

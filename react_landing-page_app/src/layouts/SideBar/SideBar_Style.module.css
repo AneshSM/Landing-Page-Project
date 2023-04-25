@@ -1,0 +1,19 @@
+.container {
+  height: 100%;
+  position: sticky;
+  transition: width 2s ease-in-out;
+  background-color: #939286;
+  color: #eee5d4;
+}
+.close {
+  width: 5vw;
+}
+.open {
+  width: 20vw;
+}
+
+.burger_menu {
+  background: none;
+  border: none;
+  font-size: x-large;
+}

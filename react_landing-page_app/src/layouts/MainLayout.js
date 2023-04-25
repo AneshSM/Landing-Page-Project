@@ -7,13 +7,17 @@ import { Outlet } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 // Style
-import { MainLayoutContainer } from "./Style";
+import { MainContent, MainLayoutContainer } from "./Style";
+import SideBar from "./SideBar/SideBar";
 
 const MainLayout = () => {
   return (
     <MainLayoutContainer>
-      <Outlet />
-      <Footer />
+      <MainContent>
+        <Header />
+        <Outlet />
+        <Footer />
+      </MainContent>
     </MainLayoutContainer>
   );
 };
