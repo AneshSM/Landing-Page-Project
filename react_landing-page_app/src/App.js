@@ -1,4 +1,3 @@
-import "./App.css";
 // installed
 import { RouterProvider } from "react-router-dom";
 // custom
