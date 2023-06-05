@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 // icon
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";

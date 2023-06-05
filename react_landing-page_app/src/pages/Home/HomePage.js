@@ -3,9 +3,11 @@ import React from "react";
 // style
 import homePageStyle from "./HomePage_Style.module.css";
 import styled from "styled-components";
+import PageContainer from "../PageStyle";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
-  return <></>;
+  return <PageContainer>Home Page</PageContainer>;
 };
 
 export default HomePage;

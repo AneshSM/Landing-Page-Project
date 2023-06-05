@@ -1,0 +1,43 @@
+.container {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #564434;
+}
+
+.title {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #eee5d4;
+  font-size: x-large;
+  font-weight: 800;
+  object-fit: contain;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0.5rem;
+  flex: 1 1 auto;
+}
+.logo {
+  height: 100%;
+  object-fit: contain;
+}
+.title > h1 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  flex: 1 1 auto;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 2 1 auto;
+  gap: 5vw;
+  padding-right: 5rem;
+}

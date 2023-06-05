@@ -4,6 +4,7 @@ import React from "react";
 import LandingPageStyle from "./LandingPage_Style.module.css";
 import styled from "styled-components";
 import { Contact, HeroSlider } from "../utils";
+import PageContainer from "./PageStyle";
 
 const LandingPage = () => {
   return (
@@ -13,9 +14,9 @@ const LandingPage = () => {
 
         <StartBtton>Let’s get started!</StartBtton>
       </div>
-      <div className={LandingPageStyle.sliderSec}>
+      <PageContainer className={LandingPageStyle.sliderSec}>
         <HeroSlider />
-      </div>
+      </PageContainer>
       <div className={LandingPageStyle.contact}>
         <Contact />
       </div>
