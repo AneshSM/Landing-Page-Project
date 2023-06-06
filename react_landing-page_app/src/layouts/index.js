@@ -1,2 +1,4 @@
-export { default as MainLayout } from "./Main/MainLayout";
-export { default as SideBar } from "./SideBar/SideBar";
+export { MainLayout } from "./Main";
+export { SideBar } from "./SideBar";
+export { Header } from "./Header";
+export { Footer } from "./Footer";

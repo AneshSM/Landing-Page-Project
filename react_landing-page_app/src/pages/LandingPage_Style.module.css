@@ -1,31 +1,38 @@
-.heroSec {
-  width: 100%;
-  height: 90vh;
-  flex: 1 1 auto;
-  background-image: url("https://images.pexels.com/photos/2118560/pexels-photo-2118560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-}
 .sliderSec {
-  width: 100%;
-  height: 100vh;
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
+  @apply w-full h-[100vh] flex-auto flex items-center 
+  justify-around flex-col;
 }
-.contact {
-  width: 100%;
-  height: 100vh;
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
+.heroSec {
+  background-image: url("../assets/hero section.jpg");
+
+  @apply w-full h-[100vh] flex-auto flex items-center 
+  justify-between flex-col flex-wrap;
+}
+.headline {
+  @apply text-primary_light text-[6rem]  
+  font-mono   font-extrabold;
+  text-shadow: 8px 4px 8px #465a86;
+}
+.content {
+  @apply flex flex-col items-center justify-evenly flex-auto;
+}
+.content > p {
+  @apply w-full  flex items-center flex-col p-1;
+}
+.headline + caption {
+  @apply w-full text-primary_light p-3 border 
+  rounded-3xl bg-secondary_transparent;
+  text-shadow: 1px 1px 1px #465a86;
+}
+.heroimg {
+  @apply object-contain flex flex-auto min-w-[40vh] min-h-full border;
+}
+.image {
+  @apply object-contain h-full w-full;
+}
+
+.content > button {
+  @apply border border-primary_dark bg-primary_light
+   text-secondary_dark font-semibold rounded-xl p-4 sm:text-[18px] 
+   text-[15px];
 }

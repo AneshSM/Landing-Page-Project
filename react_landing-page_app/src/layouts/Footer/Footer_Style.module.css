@@ -1,43 +1,33 @@
 .container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  background-color: #31302e;
-  color: #ffbf9a;
-  padding: 5rem;
-  padding-bottom: 2rem;
+  @apply w-full flex-1 flex items-center justify-evenly
+   flex-col bg-secondary text-primary_light p-4 pb-2 min-h-[100vh];
 }
 
 .main_container {
-  width: 100%;
-  display: flex;
-  padding: 10px;
-  flex: 2 1 auto;
-  gap: 10px;
+  @apply mt-[10vh] w-full p-2 flex-[2] 
+  flex gap-4 items-start justify-evenly flex-wrap;
 }
-
+.card {
+  @apply h-fit min-h-[35vh] flex 
+  flex-col items-center justify-start gap-4 p-2 flex-1;
+}
+.card > h2 {
+  @apply p-2 font-semibold  border-b border-primary_dark;
+}
+.card > ul {
+  @apply w-full h-full items-center justify-evenly 
+  flex flex-col flex-auto;
+}
+.content {
+  @apply w-full flex items-center justify-center min-w-[10rem];
+}
 .social_container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  gap: 10px;
-  flex: 1 1 auto;
-  border-bottom: 1px solid #ffbf9a;
+  @apply flex items-center 
+  justify-center  gap-5 p-2
+  after:w-[25vw] after:border-t
+  before:w-[25vw] before:border-t
+  sm:text-5xl text-3xl;
 }
 .legal_container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px;
-}
-
-.icon_container {
-  font-size: 3rem;
-  color: #ffbf9a;
+  @apply w-full flex items-center justify-between p-4;
 }

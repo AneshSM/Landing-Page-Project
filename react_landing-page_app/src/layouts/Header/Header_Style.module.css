@@ -1,9 +1,12 @@
 .container {
-  @apply p-1 sm:h-[10vh] h-[8vh] w-[100%] flex items-center justify-between bg-primary;
+  @apply p-1 sm:h-[10vh] h-[8vh] w-[100%] flex
+   items-center justify-between bg-secondary_dark
+  fixed top-0 z-30;
 }
 
 .title {
-  @apply h-[100%] w-[80%] sm:w-[35%] flex items-center justify-start gap-4 p-2;
+  @apply h-[100%] w-[80%] sm:w-[35%] flex
+   items-center justify-start gap-4 p-2;
 }
 
 .logo {
@@ -11,5 +14,5 @@
 }
 
 .title > h1 {
-  @apply text-font text-[18px] md:text-[25px] font-semibold;
+  @apply text-primary text-[18px] md:text-[25px] font-semibold;
 }

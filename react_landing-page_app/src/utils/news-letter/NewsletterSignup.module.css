@@ -1,28 +1,15 @@
 .newsletter_container {
-  padding: 10px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 10%;
+  @apply flex flex-col items-center justify-center h-fit p-8 
+  rounded-xl bg-secondary_dark hover:border;
 }
 .newsletter_container > h1 {
+  @apply font-semibold text-primary border-b;
 }
 .newsletter input,
 .newsletter button {
-  font: inherit;
-  padding: 0.25rem 0.75rem;
-  border-radius: 0;
-  border: none;
+  @apply p-2 rounded-md mt-4 border-none;
 }
 
 .newsletter button {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  cursor: pointer;
-}
-
-.newsletter button:hover {
-  background-color: #fae1af;
-  color: #31302e;
+  @apply font-semibold border border-primary cursor-pointer ml-2 hover:bg-primary hover:text-secondary_dark;
 }

@@ -23,9 +23,9 @@ const NavBar = () => {
             key={index}
             className={`${
               index === headerContent.nav.length - 1 ? "mr-0" : "mr-10"
-            }`}
+            } text-primary_light font-semibold  hover:text-primary hover:border-b`}
             to={value.to}
-            style={{ textDecoration: "none", color: "#eee5d4" }}
+            style={{ textDecoration: "none" }}
           >
             {value.name}
           </Link>
@@ -49,9 +49,9 @@ const NavBar = () => {
           {headerContent.nav.map((value, index) => (
             <Link
               key={index}
-              className={`${
-                index === headerContent.nav.length - 1 ? "mb-0" : "mb-6"
-              } w-full flex  justify-center`}
+              className={`${navbarStyle.content} ${
+                index === headerContent.nav.length - 1 ? "mb-0" : "mb-5"
+              } title_font_size`}
               to={value.to}
               style={{ textDecoration: "none", color: "#eee5d4" }}
             >

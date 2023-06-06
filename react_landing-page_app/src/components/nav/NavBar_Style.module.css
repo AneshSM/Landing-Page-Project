@@ -5,16 +5,19 @@
 .nav {
   @apply text-[15px] md:text-[18px] 
   items-center justify-end w-[100%] 
-  h-[100%] hidden sm:flex gap-4 pr-8;
+  h-[100%] hidden sm:flex gap-3 pr-4;
 }
 .menu {
   @apply sm:hidden flex-auto  h-[100%] 
   flex items-center justify-center text-[20px] 
-  relative flex-col cursor-pointer;
+  relative flex-col cursor-pointer text-primary_light;
 }
 .sidebar {
-  @apply fixed top-0  z-40 bg-primary_light 
+  @apply fixed top-0  z-40 bg-secondary_dark   
   w-[50vw] min-h-[100vh] flex flex-col 
-   text-white rounded-xl duration-500 
-   p-2 pt-20 items-center justify-start;
+   text-secondary_light  duration-500 
+   p-2 pt-20 items-center justify-start gap-1;
+}
+.content {
+  @apply hover:border-b  flex  justify-center p-1;
 }

@@ -1,19 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// custom
-import { ListComponent } from "../../components";
-import { NewsletterSignup } from "../../utils";
 
-// icons
-import {
-  AiFillInstagram,
-  AiFillTwitterCircle,
-  AiFillFacebook,
-  AiFillLinkedin,
-} from "react-icons/ai";
+import { NewsletterSignup } from "../../utils";
 
 // style
 import footerStyle from "./Footer_Style.module.css";
+import { footerContent } from "../../constants";
 
 const Footer = () => {
   return (
@@ -28,20 +20,28 @@ const Footer = () => {
 export default Footer;
 
 const MainFooter = () => {
-  const Contents = [
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
-    "  Lorem ipsum dolor elit. ",
-    "  Lorem ipsum    ",
-    "   Lorem ipsum dolor sit amet.",
-    "  Lorem ipsum ",
-    "  Lorem ipsum dolor sit.    ",
-  ];
   return (
     <div className={footerStyle.main_container}>
-      <ListComponent title={"About"} />
-      <ListComponent title={"Contents"} items={Contents} />
-      <ListComponent title={"Contact"} />
-      <NewsletterSignup />
+      {footerContent.main.map((value, index) => (
+        <div
+          className={`
+          ${footerStyle.card}
+          ${value.name === "NEWS LETTER" && "min-w-[25rem]"}
+          `}
+        >
+          <h2 className="title_font_size">{value.name}</h2>
+          <ul>
+            {value.content.map((data, index) => (
+              <li className={footerStyle.content}>
+                <Link className="common_font_size" to={data.to}>
+                  {data.title}
+                </Link>
+              </li>
+            ))}
+            <li>{value.data && value.data}</li>
+          </ul>
+        </div>
+      ))}
     </div>
   );
 };
@@ -49,42 +49,41 @@ const MainFooter = () => {
 const SocialFooter = () => {
   return (
     <div className={footerStyle.social_container}>
-      <div className={footerStyle.icon_container}>
-        <Link style={{ textDecoration: "none", color: "#ffbf9a" }}>
-          <AiFillInstagram />
-        </Link>
-      </div>
-      <div className={footerStyle.icon_container}>
-        <Link style={{ textDecoration: "none", color: "#ffbf9a" }}>
-          <AiFillTwitterCircle />
-        </Link>
-      </div>
-      <div className={footerStyle.icon_container}>
-        <Link style={{ textDecoration: "none", color: "#ffbf9a" }}>
-          <AiFillFacebook />
-        </Link>
-      </div>
-      <div className={footerStyle.icon_container}>
-        <Link style={{ textDecoration: "none", color: "#ffbf9a" }}>
-          <AiFillLinkedin />
-        </Link>
-      </div>
-      <div className={footerStyle.icon_container}></div>
+      {footerContent.icons.map((value, index) => (
+        <div className={footerStyle.icon_container}>
+          <Link
+            className="text-primary_light hover:text-primary_dark "
+            to={value.to}
+            style={{ textDecoration: "none" }}
+          >
+            {value.tag}
+          </Link>
+        </div>
+      ))}
     </div>
   );
 };
 const LegalFooter = () => {
+  const { tc, pp, cr } = footerContent.legal;
   return (
     <div className={footerStyle.legal_container}>
+      <p className="common_font_size">&copy;{cr.name}</p>
       <div style={{ display: "flex", gap: "10px" }}>
-        <Link style={{ textDecoration: "none", color: "#eee5d4" }}>
-          Terms &amp; Conditions
+        <Link
+          to={pp.to}
+          className={"text-primary_light common_font_size"}
+          style={{ textDecoration: "none" }}
+        >
+          {pp.name}
         </Link>
-        <Link style={{ textDecoration: "none", color: "#eee5d4" }}>
-          Privacy Policy
+        <Link
+          to={tc.to}
+          className={"text-primary_light common_font_size"}
+          style={{ textDecoration: "none" }}
+        >
+          {tc.name}
         </Link>
       </div>
-      <p>&copy; 2019 Copyright Nowrap Inc.</p>
     </div>
   );
 };

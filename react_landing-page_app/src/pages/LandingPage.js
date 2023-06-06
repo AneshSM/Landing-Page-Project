@@ -1,43 +1,43 @@
 import React from "react";
 
+import styled from "styled-components";
+
 // style
 import LandingPageStyle from "./LandingPage_Style.module.css";
-import styled from "styled-components";
+
 import { Contact, HeroSlider } from "../utils";
 import PageContainer from "./PageStyle";
+
+// assets
+import h_img from "../assets/heroImage.jpg";
 
 const LandingPage = () => {
   return (
     <>
       <div className={LandingPageStyle.heroSec}>
-        <Headline>Hero Section</Headline>
-
-        <StartBtton>Let’s get started!</StartBtton>
+        <div className={LandingPageStyle.content}>
+          <p>
+            <h1 className={LandingPageStyle.headline}>Hero Section</h1>
+            <caption>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatum, cm.
+            </caption>
+          </p>
+          <button>Let’s get started!</button>
+        </div>
+        <div className={LandingPageStyle.heroimg}>
+          <img
+            className={LandingPageStyle.image}
+            src={h_img}
+            alt="hero_image"
+          />
+        </div>
       </div>
       <PageContainer className={LandingPageStyle.sliderSec}>
         <HeroSlider />
       </PageContainer>
-      <div className={LandingPageStyle.contact}>
-        <Contact />
-      </div>
     </>
   );
 };
 
 export default LandingPage;
-
-const Headline = styled.h1`
-  font-size: 10rem;
-  color: #40291c;
-  opacity: 0.8;
-`;
-
-const StartBtton = styled.button`
-  background: none;
-  border: none;
-  background-color: #eee5d4;
-  color: #7e7383;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: x-large;
-`;

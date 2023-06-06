@@ -12,9 +12,15 @@ function NewsletterSignup() {
 
   return (
     <div className={classes.newsletter_container}>
-      <h1>Stay Updated</h1>
-      <p>Subscribe to our newsletter to get our latest news.</p>
-      <Form action="/newsletter" method="post" className={classes.newsletter}>
+      <h1 className="title_font_size ">STAY UPDATED</h1>
+      <p className="common_font_size">
+        Subscribe to our newsletter to get our latest news.
+      </p>
+      <Form
+        action="/newsletter"
+        method="post"
+        className={`common_font_size ${classes.newsletter}`}
+      >
         <input
           type="email"
           placeholder="Sign up for newsletter..."
