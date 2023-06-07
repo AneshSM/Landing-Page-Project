@@ -89,3 +89,32 @@ export const footerContent = {
     { name: "Twitter", tag: <AiFillTwitterCircle />, to: "" },
   ],
 };
+
+export const sliderContent = {
+  slides: [
+    {
+      title: "",
+      caption: "",
+      imgURL:
+        "https://images.pexels.com/photos/4411214/pexels-photo-4411214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      title: "",
+      caption: "",
+      imgURL:
+        "https://images.pexels.com/photos/2017021/pexels-photo-2017021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      title: "",
+      caption: "",
+      imgURL:
+        "https://images.pexels.com/photos/4060937/pexels-photo-4060937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      title: "",
+      caption: "",
+      imgURL:
+        "https://images.pexels.com/photos/6589610/pexels-photo-6589610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
+};

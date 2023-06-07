@@ -2,33 +2,37 @@
   @apply w-full h-[100vh] flex-auto flex items-center 
   justify-around flex-col;
 }
+/* Hero Section */
 .heroSec {
   background-image: url("../assets/hero section.jpg");
 
-  @apply w-full h-[100vh] flex-auto flex items-center 
-  justify-between flex-col flex-wrap;
+  @apply w-full   min-h-[100vh] flex items-center 
+  justify-between flex-wrap p-8 gap-3;
+}
+.content {
+  @apply flex flex-col items-center justify-around 
+   h-[25rem] flex-1 min-w-[50%];
 }
 .headline {
   @apply text-primary_light text-[6rem]  
-  font-mono   font-extrabold;
+  font-mono font-extrabold;
   text-shadow: 8px 4px 8px #465a86;
 }
-.content {
-  @apply flex flex-col items-center justify-evenly flex-auto;
-}
-.content > p {
-  @apply w-full  flex items-center flex-col p-1;
+.content > div {
+  @apply w-full flex items-center flex-col 
+  text-center gap-4 justify-center;
 }
 .headline + caption {
-  @apply w-full text-primary_light p-3 border 
-  rounded-3xl bg-secondary_transparent;
+  @apply w-full text-primary_light p-3  
+  rounded-3xl bg-secondary_dark;
   text-shadow: 1px 1px 1px #465a86;
 }
+
 .heroimg {
-  @apply object-contain flex flex-auto min-w-[40vh] min-h-full border;
+  @apply flex min-w-[20rem] h-[35rem] flex-auto;
 }
 .image {
-  @apply object-contain h-full w-full;
+  @apply object-cover w-full h-full rounded-2xl shadow-primary shadow-md;
 }
 
 .content > button {

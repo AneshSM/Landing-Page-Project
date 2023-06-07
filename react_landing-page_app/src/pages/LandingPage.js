@@ -16,13 +16,13 @@ const LandingPage = () => {
     <>
       <div className={LandingPageStyle.heroSec}>
         <div className={LandingPageStyle.content}>
-          <p>
+          <div>
             <h1 className={LandingPageStyle.headline}>Hero Section</h1>
             <caption>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptatum, cm.
             </caption>
-          </p>
+          </div>
           <button>Let’s get started!</button>
         </div>
         <div className={LandingPageStyle.heroimg}>

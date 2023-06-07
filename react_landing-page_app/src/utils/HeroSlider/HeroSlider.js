@@ -7,57 +7,47 @@ import { GiPlainCircle } from "react-icons/gi";
 // style
 import styled from "styled-components";
 
-const images = [
-  "https://images.pexels.com/photos/551578/pexels-photo-551578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/1245066/pexels-photo-1245066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/305535/pexels-photo-305535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/3511104/pexels-photo-3511104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-];
+// constants
+import { sliderContent } from "../../constants";
 
 const HeroSlider = () => {
-  const [url, setUrl] = useState(0);
-  const right = () => {
-    setUrl(() => (url >= images.length - 1 ? 0 : url + 1));
-  };
-  const left = () => {
-    setUrl(() => (url < 1 ? images.length - 1 : url - 1));
-    clearInterval(callRight);
-  };
-  const callRight = setInterval(() => {
-    right();
-    clearInterval(callRight);
+  const { slides } = sliderContent;
+  const [state, setState] = useState(0);
+  setInterval(() => {
+    setState((prev) => prev++);
+    state === slides.length - 1 && setState(0);
   }, 5000);
+  console.log(state);
   return (
     <HeroSliderContainer>
       <Slider>
-        <Slide className="image" src={images[url]} />
+        <Slide className="image" src={slides[state].imgURL} />
         <Caption>Caption</Caption>
       </Slider>
-      <ActionButton left id="left" onClick={left}>
-        <BsArrowLeftCircle />
-      </ActionButton>
-      <ActionButton right id="right" onClick={right}>
-        <BsArrowRightCircle />
-      </ActionButton>
+
       <ActionButtons>
         <BottomActionButton bottom>
           <GiPlainCircle
-            style={{ color: url === 0 ? "white" : "transparent" }}
+            className="border rounded-lg"
+            style={{ color: state === 0 ? "white" : "transparent" }}
           />
         </BottomActionButton>
         <BottomActionButton bottom>
           <GiPlainCircle
-            style={{ color: url === 1 ? "white" : "transparent" }}
+            className="border rounded-lg"
+            style={{ color: state === 1 ? "white" : "transparent" }}
           />
         </BottomActionButton>
         <BottomActionButton bottom>
           <GiPlainCircle
-            style={{ color: url === 2 ? "white" : "transparent" }}
+            className="border rounded-lg"
+            style={{ color: state === 2 ? "white" : "transparent" }}
           />
         </BottomActionButton>
         <BottomActionButton bottom>
           <GiPlainCircle
-            style={{ color: url === 3 ? "white" : "transparent" }}
+            className="border rounded-lg"
+            style={{ color: state === 3 ? "white" : "transparent" }}
           />
         </BottomActionButton>
       </ActionButtons>
@@ -117,6 +107,7 @@ const ActionButtons = styled.div`
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
+  margin-bottom: 2rem;
 `;
 
 const BottomActionButton = styled.button`
